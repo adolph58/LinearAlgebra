@@ -29,3 +29,8 @@ if __name__ == "__main__":
     print(f"B.dot(A) = {matrix2.dot(matrix)}")
 
     print(f"P.T = {P.T()}")
+
+    I = Matrix.identity(2)
+    print(I)
+    print(f"A.dot(I) = {matrix.dot(I)}")
+    print(f"I.dot(A) = {I.dot(matrix)}")
