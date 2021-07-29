@@ -4,8 +4,8 @@ from playLA.LinearSystem import LinearSystem
 
 if __name__ == "__main__":
 
-    # A = Matrix([[1, 2, 4], [3, 7, 2], [2, 3, 3]])
-    A = Matrix([[0, 1, 5], [3, 7, 2], [2, 3, 3]])
+    A = Matrix([[1, 2, 4], [3, 7, 2], [2, 3, 3]])
+    # A = Matrix([[0, 1, 5], [3, 7, 2], [2, 3, 3]])
     b = Vector([13, -11, 1])
     ls = LinearSystem(A, b)
     ls.gauss_jordan_elimination()
