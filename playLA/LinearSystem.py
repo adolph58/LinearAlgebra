@@ -52,9 +52,15 @@ class LinearSystem:
                 self.Ab[j] = self.Ab[j] - self.Ab[j][k] * self.Ab[i]
 
     def gauss_jordan_elimination(self):
+        """如果有解，返回 True；如果没有解，返回 False"""
 
         self._forward()
         self._backward()
+
+        for i in range(len(self.pivots), self._m):
+            if not is_zero(self.Ab[i][-1]):
+                return False
+        return True
 
     def fancy_print(self):
 
